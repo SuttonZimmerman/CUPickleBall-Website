@@ -17,6 +17,60 @@ header {
     border-bottom: 5px solid #e96f28;
 }
 
+/* Main navigation bar */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 1%;
+    background-color: #e96f28;
+    min-height: 65px;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo img {
+    display: block;
+    width: 100px;
+    height: auto;
+}
+
+/* Navigation links */
+.navigation {
+    background-color: #e96f28 ;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Hover effect for regular links */
+.navigation a:not(.join-button):hover {
+    color: #0C2950;
+}
+
+/* Join Friends button */
+.navigation .join-button {
+    background-color: #0C2950 ;
+    color: #ffffff;
+    padding: 17px 23px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: background-color 0.2s ease;
+}
+
+.navigation .join-button:hover {
+    background-color: #0C2950;
+}
+
 header h1 {
     margin: 0;
 }
@@ -64,4 +118,26 @@ footer {
     .small {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+@media (max-width: 900px){
+    .site-header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 15px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px){
+    .navigation {
+        flex-direction: column;
+        gap: 18px;
+    }
+
 }
