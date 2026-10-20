@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carroll University Pickleball Club</title>
+    <link rel="stylesheet" href="css/sign-up-style.css">
+
+        
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt="Pickleball Club Logo">
+        </a>
+
+        <nav class="navigation">
+            <a href="index.html">The Club</a>
+            <a href="sign-up.html">Sign-Up</a>
+            <a href="events.html">Events</a>
+            <a href="temp.html" class="join-button">Temp</a>
+        </nav>
+    </header>
+
+
+
+<main class="signup-main">
+    <section class="signup-card" id="signup-request" aria-labelledby="signup-heading">
+        <h2 class="signup-heading" id="signup-heading">Request Form</h2>
+        <p class="signup-intro">Complete the form below if you are interested in joining the club.</p>
+
+        <form class="signup-form" id="request-form">
+            <div class="form-grid">
+                <div class="form-field">
+                    <label for="name">Full Name</label>
+                    <input id="name" name="fullName" type="text" minlength="2" maxlength="50" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type="email" placeholder="name@example.com" required>
+                </div>
+                <div class="form-field">
+                    <label for="phone">Phone Number</label>
+                    <p class="field-help" id="phone-help">Enter your phone number, e.g. 330-263-2121.</p>
+                    <input id="phone" name="phone" type="tel" placeholder="330-263-2121"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" aria-describedby="phone-help" required>
+                </div>
+                <div class="form-field">
+                    <label for="skill">Skill Level (1-10)</label>
+                    <input id="skill" name="skillLevel" type="number" min="1" max="10" step="1" required>
+                </div>
+            </div>
+
+            <fieldset class="form-options">
+                <legend>What is your favorite type of pickleball game?</legend>
+                <label><input type="radio" name="favoriteGame" value="singles" required> Singles</label>
+                <label><input type="radio" name="favoriteGame" value="doubles"> Doubles</label>
+                <label><input type="radio" name="favoriteGame" value="king-of-the-court"> King of the Court</label>
+            </fieldset>
+
+            <fieldset class="form-options">
+                <legend>What equipment do you have?</legend>
+                <label><input type="checkbox" name="equipment" value="pickleballs"> Pickleballs</label>
+                <label><input type="checkbox" name="equipment" value="paddles"> Paddles</label>
+                <label><input type="checkbox" name="equipment" value="nets"> Nets</label>
+                <label><input type="checkbox" name="equipment" value="scoresheets"> Scoresheets</label>
+                <label><input type="checkbox" name="equipment" value="none"> None</label>
+            </fieldset>
+
+            <div class="form-field">
+                <label for="session">Request a Practice Session with a Coach</label>
+                <select id="session" name="session">
+                    <option value="">No session</option>
+                    <option value="2pm">2:00 PM Session</option>
+                    <option value="230pm">2:30 PM Session</option>
+                    <option value="3pm">3:00 PM Session</option>
+                    <option value="330pm">3:30 PM Session</option>
+                    <option value="4pm">4:00 PM Session</option>
+                    <option value="430pm">4:30 PM Session</option>
+                    <option value="5pm">5:00 PM Session</option>
+                    <option value="530pm">5:30 PM Session</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="comments">Comments or Questions</label>
+                <textarea id="comments" name="comments" rows="5"
+                    placeholder="Enter any questions or comments here."></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button class="submit-button" type="submit">Register</button>
+                <button class="reset-button" type="reset">Clear Form</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<footer>Carroll University Pickleball Club</footer>
+
+</body>
+</html>

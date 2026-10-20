@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: #0c2950;
+    color: #ffffff;
+    text-align: center;
+    padding: 24px 16px;
+    border-bottom: 5px solid #e96f28;
+}
+
+/* Main navigation bar */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 10px;
+    background-color: #e96f28;
+    min-height: 65px;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo img {
+    display: block;
+    width: 100px;
+    height: auto;
+}
+
+/* Navigation links */
+.navigation {
+    background-color: #e96f28 ;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Hover effect for regular links */
+.navigation a:not(.join-button):hover {
+    color: #0C2950;
+}
+
+/* Join Friends button */
+.navigation .join-button {
+    background-color: #0C2950 ;
+    color: #ffffff;
+    padding: 17px 23px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: background-color 0.2s ease;
+}
+
+.signup-main {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+.signup-card {
+    padding: clamp(20px, 4vw, 40px);
+    background: #fff;
+    border: 1px solid #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(12, 41, 80, 0.08);
+}
+
+.signup-heading {
+    margin-top: 0;
+    color: #0c2950;
+}
+
+.signup-intro {
+    margin-bottom: 24px;
+    color: #0c2950;
+}
+
+.signup-form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.form-field {
+    display: grid;
+    align-content: start;
+    gap: 6px;
+}
+
+.form-field label,
+.form-options legend {
+    font-weight: 600;
+    color: #0c2950;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #0c2950;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: 3px solid rgba(233, 111, 40, 0.25);
+    border-color: #e96f28;
+}
+
+.field-help {
+    margin: 0;
+    color: #0c2950;
+    font-size: 14px;
+}
+
+.form-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin: 0;
+    padding: 16px;
+    border: 1px solid #0c2950;
+    border-radius: 10px;
+}
+
+.form-options legend {
+    padding: 0 6px;
+}
+
+.form-options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.form-actions button {
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-button {
+    color: #fff;
+    background: #e96f28;
+}
+
+.reset-button {
+    color: #0c2950;
+    background: #ffffff;
+    border: 1px solid #0c2950 !important;
+}
+
+
+footer {
+    background: #e96f28;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px){
+    .site-header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 15px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px){
+    .navigation {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
