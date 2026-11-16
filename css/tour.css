@@ -1,0 +1,522 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background: #0c2950;
+    color: #ffffff;
+    text-align: center;
+    padding: 24px 16px;
+    border-bottom: 5px solid #e96f28;
+}
+
+/* Main navigation bar */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 10px;
+    background-color: #e96f28;
+    min-height: 65px;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo img {
+    display: block;
+    width: 100px;
+    height: auto;
+}
+
+/* Navigation links */
+.navigation {
+    background-color: #e96f28 ;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Hover effect for regular links */
+.navigation a:not(.join-button):hover {
+    color: #0C2950;
+}
+
+/* Join Friends button */
+.navigation .join-button {
+    background-color: #0C2950 ;
+    color: #ffffff;
+    padding: 17px 23px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: background-color 0.2s ease;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f3f7;
+    color: #222;
+}
+
+
+.container {
+    max-width: 1600px;
+    margin: auto;
+    padding: 25px;
+}
+
+.section {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #1d5bd1;
+    margin-top: 0;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 7px;
+    font-size: 15px;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #1d5bd1;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+button:disabled {
+    cursor: default;
+    opacity: 0.55;
+}
+
+.primary-btn {
+    background: #1d5bd1;
+    color: white;
+}
+
+.orange-btn {
+    background: #f58220;
+    color: white;
+}
+
+.reset-btn {
+    background: #333;
+    color: white;
+}
+
+.tournament-info {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.info-card {
+    flex: 1;
+    min-width: 130px;
+    background: #eaf0ff;
+    border-left: 5px solid #1d5bd1;
+    padding: 15px;
+    border-radius: 7px;
+}
+
+.info-card h3 {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+}
+
+.info-card p {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 8px 0 0;
+    color: #1d5bd1;
+}
+
+.bracket-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 15px 10px 30px;
+}
+
+.bracket {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 55px;
+    width: max-content;
+    min-width: 100%;
+    margin: auto;
+    padding: 0 20px 10px;
+}
+
+.round {
+    width: 255px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.round h3 {
+    background: #1d5bd1;
+    color: white;
+    padding: 13px;
+    border-radius: 7px;
+    text-align: center;
+    margin: 0 0 12px;
+    height: 43px;
+    font-size: 14px;
+}
+
+.round-body {
+    position: relative;
+}
+
+.match {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 140px;
+    background: white;
+    border: 2px solid #d5d5d5;
+    border-radius: 9px;
+    padding: 9px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+
+.match-number {
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.player {
+    background: #f1f3f7;
+    border: 1px solid #ddd;
+    padding: 7px;
+    margin: 4px 0;
+    border-radius: 5px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    min-height: 29px;
+}
+
+.player span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.player.winner {
+    background: #e2f5e7;
+    border: 2px solid #259b49;
+    font-weight: bold;
+}
+
+.player.loser {
+    opacity: 0.5;
+}
+
+.player button {
+    padding: 5px 8px;
+    font-size: 10px;
+    background: #f58220;
+    color: white;
+    flex-shrink: 0;
+}
+
+.score-input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 11px;
+}
+
+.match-status {
+    font-size: 10px;
+    color: #777;
+    margin-top: 4px;
+}
+
+.bye {
+    background: #fff1e3;
+    border-color: #f58220;
+}
+
+.bye-label {
+    color: #c7660b;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.connector-lines {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: visible;
+}
+
+.connector-lines path {
+    fill: none;
+    stroke: #f58220;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.hide-scores .score-input {
+    display: none;
+}
+
+.third-place {
+    margin-top: 35px;
+    padding: 25px;
+    border: 3px solid #f58220;
+    border-radius: 12px;
+    background: #fff9f3;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.third-place h2 {
+    color: #f58220;
+    text-align: center;
+}
+
+.third-match {
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 9px;
+    padding: 15px;
+}
+
+.third-match .player {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.third-match .player button {
+    font-size: 11px;
+}
+
+.third-match .score-input {
+    font-size: 13px;
+    padding: 9px;
+}
+
+.champion {
+    background: #fff1e3;
+    border: 3px solid #f58220;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 25px;
+    display: none;
+}
+
+.champion h2 {
+    color: #f58220;
+    font-size: 26px;
+}
+
+.champion-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1d5bd1;
+}
+
+.third-winner {
+    font-size: 21px;
+    font-weight: bold;
+    color: #f58220;
+    margin-top: 15px;
+}
+
+footer {
+    background: #1d5bd1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 35px;
+}
+
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 12px;
+    max-width: 750px;
+    margin: 40px auto 20px;
+    text-align: center;
+}
+
+.podium-place {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.podium-medal {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.podium-place h3 {
+    font-size: 15px;
+    margin: 5px 0 10px;
+}
+
+.podium-name {
+    font-size: 17px;
+    font-weight: bold;
+    color: #1d5bd1;
+    overflow-wrap: anywhere;
+    margin-bottom: 8px;
+}
+
+.podium-score {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.podium-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px 8px 0 0;
+}
+
+.podium-place.first .podium-block {
+    height: 180px;
+    background: #f58220;
+}
+
+.podium-place.first h3 {
+    color: #f58220;
+}
+
+.podium-place.second .podium-block {
+    height: 125px;
+    background: #1d5bd1;
+}
+
+.podium-place.third .podium-block {
+    height: 90px;
+    background: #777;
+}
+
+.podium-footer {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 25px;
+    color: #1d5bd1;
+    line-height: 1.8;
+}
+
+@media (max-width: 500px) {
+
+    .podium {
+        gap: 5px;
+    }
+
+    .podium-medal {
+        font-size: 30px;
+    }
+
+    .podium-place h3 {
+        font-size: 11px;
+    }
+
+    .podium-name {
+        font-size: 12px;
+    }
+
+    .podium-score {
+        font-size: 10px;
+    }
+
+    .podium-place.first .podium-block {
+        height: 140px;
+    }
+
+    .podium-place.second .podium-block {
+        height: 100px;
+    }
+
+    .podium-place.third .podium-block {
+        height: 70px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+}
