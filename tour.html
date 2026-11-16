@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carroll University Pickleball Tournament</title>
+
+    <link rel="stylesheet" href="css/tour.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt="Pickleball Club Logo">
+        </a>
+
+        <nav class="navigation">
+            <a href="index.html">The Club</a>
+            <a href="sign-up.html">Sign-Up</a>
+            <a href="events.html">Events</a>
+            <a href="tour.html">Tournament</a>
+            <a href="temp.html" class="join-button">Temp</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- PLAYER REGISTRATION -->
+
+        <div class="section">
+
+            <h2>Player Registration</h2>
+
+            <p>Enter each player's name on a separate line.</p>
+
+            <textarea id="playerNames"
+                placeholder="John Smith&#10;Jane Doe&#10;Mike Johnson&#10;Sarah Williams&#10;Alex Brown&#10;Chris Davis"></textarea>
+
+            <div class="button-group">
+
+                <button class="primary-btn" onclick="createBracket(false)">
+                    Create Bracket
+                </button>
+
+                <button class="orange-btn" onclick="createBracket(true)">
+                    Randomize Bracket
+                </button>
+
+                <button class="reset-btn" onclick="resetTournament()">
+                    Reset
+                </button>
+
+            </div>
+
+            <p id="message"></p>
+
+        </div>
+
+        <!-- TOURNAMENT INFORMATION -->
+
+        <div class="section" id="tournamentSection" style="display:none;">
+
+            <h2>Tournament Information</h2>
+
+            <div class="tournament-info">
+
+                <div class="info-card">
+                    <h3>Total Players</h3>
+                    <p id="totalPlayers">0</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Total Rounds</h3>
+                    <p id="totalRounds">0</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Matches Completed</h3>
+                    <p id="completedMatches">0</p>
+                </div>
+
+            </div>
+
+            <div class="button-group">
+
+                <button class="orange-btn" id="scoreToggle" onclick="toggleScores()">
+                    Hide Scores
+                </button>
+
+            </div>
+
+            <p>
+                Select the winner of each match.
+                Winners automatically advance to the next round.
+            </p>
+
+        </div>
+
+        <!-- BRACKET -->
+
+        <div class="section" id="bracketSection" style="display:none;">
+
+            <h2 style="text-align:center;">
+                Tournament Bracket
+            </h2>
+
+            <p style="text-align:center;">
+                Follow the orange connection lines to see where
+                each winner advances.
+            </p>
+
+            <div class="bracket-wrapper" id="bracketWrapper">
+
+                <div class="bracket" id="bracket">
+
+                </div>
+
+            </div>
+
+            <!-- THIRD PLACE MATCH -->
+
+            <div class="third-place" id="thirdPlace" style="display:none;">
+
+                <h2>🥉 THIRD PLACE MATCH</h2>
+
+                <p style="text-align:center;">
+                    The two semifinal losers compete for third place.
+                </p>
+
+                <div class="third-match" id="thirdMatch">
+
+                </div>
+
+            </div>
+
+            <!-- CHAMPION -->
+
+            <!-- TOURNAMENT PODIUM -->
+
+            <div class="champion" id="champion">
+
+                <h2>🏆 TOURNAMENT RESULTS 🏆</h2>
+
+                <div class="podium">
+
+                    <!-- SECOND PLACE -->
+
+                    <div class="podium-place second">
+
+                        <div class="podium-medal">🥈</div>
+
+                        <h3>2ND PLACE</h3>
+
+                        <div class="podium-name" id="secondName">
+                            Waiting
+                        </div>
+
+                        <div class="podium-score" id="secondScore"></div>
+
+                        <div class="podium-block">
+                            2
+                        </div>
+
+                    </div>
+
+                    <!-- FIRST PLACE -->
+
+                    <div class="podium-place first">
+
+                        <div class="podium-medal">🥇</div>
+
+                        <h3>1ST PLACE</h3>
+
+                        <div class="podium-name" id="firstName">
+                            Waiting
+                        </div>
+
+                        <div class="podium-score" id="firstScore"></div>
+
+                        <div class="podium-block">
+                            1
+                        </div>
+
+                    </div>
+
+                    <!-- THIRD PLACE -->
+
+                    <div class="podium-place third">
+
+                        <div class="podium-medal">🥉</div>
+
+                        <h3>3RD PLACE</h3>
+
+                        <div class="podium-name" id="thirdName">
+                            Waiting
+                        </div>
+
+                        <div class="podium-score" id="thirdScore"></div>
+
+                        <div class="podium-block">
+                            3
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p class="podium-footer">
+                    Carroll University Pickleball Club
+                    <br>
+                    Congratulations to all tournament participants!
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <h3>Carroll University Pickleball Club</h3>
+        <p>Play Hard. Have Fun. Compete.</p>
+    </footer>
+
+    <script src="js/tour.js" defer></script>
+
+</body>
+
+</html>
