@@ -469,6 +469,14 @@ footer {
     line-height: 1.8;
 }
 
+footer {
+    background: #e96f28;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px;
+    margin-top: 20px;
+}
+
 @media (max-width: 500px) {
 
     .podium {
