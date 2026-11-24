@@ -31,7 +31,7 @@ requestForm.addEventListener("submit", function (event) {
         formFeedback.classList.remove("error");
 
         let requestList = document.getElementById("requestList");
-        
+
 
         let newRequest = document.createElement("li");
 
@@ -39,7 +39,10 @@ requestForm.addEventListener("submit", function (event) {
             session = "No session selected";
         }
 
-        newRequest.textContent = name + " - " + session;
+        let date = document.getElementById("date").value;
+        let time = document.getElementById("time").value;
+
+        newRequest.textContent = name + " - " + date + ", " + time + ", " + session;
 
         requestList.appendChild(newRequest);
 
@@ -52,6 +55,10 @@ requestForm.addEventListener("submit", function (event) {
 
         let requestCount = document.getElementById("requestCount");
         requestCount.textContent = requestList.children.length;
+
+        // Reset the form after a successful registration
+        requestForm.reset();
+        namePreview.textContent = "Name: (not entered)";
     }
 });
 
@@ -94,5 +101,9 @@ toggleDetails.addEventListener("click", function () {
         toggleDetails.textContent = "Hide Details";
     }
 });
+
+
+// suttons bullshit \/
+
 
 
